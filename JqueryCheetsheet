@@ -1,0 +1,69 @@
+...............
+JQUERY
+...............
+You must link to your jQuery library in the header. The most recent library can be found
+at Jquery.com. You should store this file locally as well, so that you can access its functions 
+when offline. To make sure your page is connected to your library, call $ in the console log
+to make sure it doesnt come up as undefined. 
+
+P.S - when stuff doesnt work and it comes up as undefined - remember the page loads in order.
+Be sure to put in EITHER 
+
+window.onload = function () { //write 
+your script here
+}
+
+or
+
+$(document).ready( function(){ 
+	//write your script here
+}
+
+.......................................
+
+
+
+.......................................................
+....SELECTING ELEMENTS IN JQUERY IS SIMILAR TO CSS.....
+$(".class").hide();      (hide is an event)
+$(".class").show();  
+$(".class").fadeOut(1000); (fades out for 1 second)
+$(".class").fadeIn(2000);  (fades in for 2 seconds)
+$(".class").slideDown(1000);   (slides down for 1 seconds)
+$(".class").slideUp();   (slides up for 1 seconds)
+$(“.class”).animate( { opacity: 0.25, width: 70%} , 2000 ); (animates)
+
+
+To make things faster, you can also define your elements in variables - e.g - 
+
+var myclass =  $(".class");    or multiple classes/id/elements var myclass =  $(".class#id");  
+
+
+
+
+................................
+	ANONYMOUS FUNCTIONS 
+
+	Put an anoynmous function after an event (or another trigger 
+	that I dont know about yet) and it will execute
+	rather than having to be called to exectute.
+
+var myclass =  $(".class");    or multiple classes/id/elements var myclass =  $(".class#id"); 
+
+
+
+
+
+..........CLICK EVENT.........................
+myclass.click( function (){
+	$("wrapper").css("background","yellow");
+}
+	);     -----> or whatever function you want to happen - 
+
+This will turn the background of the page yellow - because you are calling the event .click 
+to your var myclass and it will executethe command in the anonymous function. 
+
+
+
+
+
