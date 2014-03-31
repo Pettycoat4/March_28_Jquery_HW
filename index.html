@@ -10,8 +10,22 @@
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 		<script>
 		$(document).ready( function() {
-			$(".quoted").fadeIn(6000);
+			$(".quoted, .quote1, .quote2").hide().fadeIn(3000);
 			
+			var nav = $("#mainnav a");
+			var hireme = $(".btn, #btntopoffset,#btntopoffset a");
+			var sidelinks = $(".sidecol p a");
+			
+			sidelinks.click( function () {
+				alert("Thanks for checking out these worthy causes!");
+			})
+
+			hireme.hide().slideDown(3000);
+			
+			nav.hover( function () {
+				$("#mainnav").css("background", "blue");
+			})
+
 			})
 		</script>
 	</head>
